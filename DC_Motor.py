@@ -1,3 +1,4 @@
+# LAKSANA AURA IBRAHIM | 235150300111032
 import sympy as sp
 
 # Definisi variabel simbolik
@@ -32,8 +33,8 @@ print("Model Listrik: ", eq1)
 print("Model Mekanik: ", eq2)
 
 print("\n=== Transformasi Laplace ===")
-print(eq1_Laplace)
-print(eq2_Laplace)
+print("Model Listrik: ", eq1_Laplace)
+print("Model Mekanik: ", eq2_Laplace)
 
 print("\n=== Fungsi Alih G(s) ===")
 print(G_s)
