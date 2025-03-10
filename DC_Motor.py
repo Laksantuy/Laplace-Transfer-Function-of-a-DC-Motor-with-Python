@@ -1,4 +1,3 @@
-# LAKSANA AURA IBRAHIM | 235150300111032
 import sympy as sp
 
 # Definisi variabel simbolik
@@ -8,7 +7,7 @@ I, omega = sp.Function('I')(t), sp.Function('omega')(t)  # Variabel waktu
 
 # Persamaan diferensial listrik dan mekanik
 eq1 = sp.Eq(L * I.diff(t) + R * I - V + K * omega, 0)  # Listrik
-eq2 = sp.Eq(J * omega.diff(t) + b * omega + K * I, 0)  # Mekaniks
+eq2 = sp.Eq(J * omega.diff(t) + b * omega - K * I, 0)  # Mekanik
 
 # Transformasi Laplace (dengan kondisi awal nol)
 I_s, Omega_s, V_s = sp.symbols('I_s Omega_s V_s')
@@ -29,12 +28,15 @@ G_s = sp.simplify(Omega_s_sol / V_s)
 
 # Tampilkan hasil
 print("=== Model Matematika Motor DC ===")
-print("Model Listrik: ", eq1)
-print("Model Mekanik: ", eq2)
+print("Model Listrik: ")
+sp.pprint(eq1) # Model Listrik
+print("Model Mekanik: ")
+sp.pprint(eq2) # Model Mekanik
+sp.pprint("\n=== Transformasi Laplace ===")
+print("Model Listrik: ") 
+sp.pprint(eq1_Laplace) # Model Listrik
+print("Model Mekanik: ")
+sp.pprint(eq2_Laplace) # Model Mekanik
 
-print("\n=== Transformasi Laplace ===")
-print("Model Listrik: ", eq1_Laplace)
-print("Model Mekanik: ", eq2_Laplace)
-
-print("\n=== Fungsi Alih G(s) ===")
-print(G_s)
+sp.pprint("\n=== Fungsi Alih G(s) ===")
+sp.pprint(G_s)
