@@ -1,3 +1,4 @@
+# Laksana Aura Ibrahim | 235150300111032
 import sympy as sp
 
 # Definisi variabel simbolik
